@@ -1,0 +1,75 @@
+// const url = "https://pokeapi.co/api/v2/pokemon/"
+// let form = document.querySelector('form')
+// let input = document.querySelector('#input-field')
+// const h1 = document.querySelector('h1')
+// console.log(form)
+// console.log(input)
+
+// form.addEventListener("submit", function (evt) {
+//     evt.preventDefault()
+//     console.log(url + input.value)
+//     fetch(url + input.value)
+//         .then(res => res.json())
+//         .then(res => {
+//             console.log(res.name)
+//             h1.innerText = res.name
+//         })
+//         .catch(err => console.log(err))
+// })
+
+// const url2 = "https://pokeapi.co/api/v2/berry/"
+// var ul = document.createElement('ul')
+// ul.textContent = " "
+// document.querySelector('body').appendChild(ul)
+// console.log(ul)
+
+
+// fetch(url2)
+//     .then(res => res.json())
+//     .then(res => {
+//         console.log(res.results)
+//         let berries = res.results
+//         console.log(berries)
+//         for (let i = 0; i < berries.length; i++){
+//             console.log(berries[i])
+//             var li = document.createElement('li')
+//             li.innerText = berries[i].name
+//             ul.appendChild(li)
+//             console.log(li)
+//         }
+//     })
+//     .catch(err => console.log(err))
+
+
+const url = "https://api.thecatapi.com/v1/images/search"
+// const url = "http://pokeapi.salestock.net/api/v2/pokemon/7"
+// use second url as a backup only
+const url2 = "https://api.thecatapi.com/v1/categories"
+
+
+// const randomButton = document.querySelector(".randomButton")
+// const randomCat = document.querySelector(".randomCat")
+// randomButton.addEventListener("click", function(evt){
+//     evt.preventDefault()
+//     fetch(url)
+//     .then(res => res.json())
+//     .then(res => {
+//         // console.log(res[0].url)
+//         let catPic = res[0].url
+//         console.log(catPic)
+//         document.querySelector(".randomCatImage").src = catPic;
+//     })
+//     .catch(err => console.log(err))
+
+// })
+
+fetch(url2)
+    .then(res => res.json())
+    .then(res => {
+        console.log(res)
+        // let catPic = res[0].url
+        // console.log(catPic)
+        // document.querySelector(".randomCatImage").src = catPic;
+        // randomCat.appendChild(catPic)
+    })
+    .catch(err => console.log(err))
