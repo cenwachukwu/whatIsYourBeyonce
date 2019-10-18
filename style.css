@@ -1,0 +1,28 @@
+*{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    margin: 0px;
+    padding: 0px;
+}
+.header1{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background-image: url(beyphotos/beyonce-background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color: black;
+    text-align: center;	
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: center;
+}
+
+li{
+    list-style-type: none;
+}
