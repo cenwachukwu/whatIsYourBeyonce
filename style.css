@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     text-align: center;
@@ -9,7 +9,7 @@ body{
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
-    background-color: var(--primary-color);ß
+    background-color: var(--primary-color);
 }
 
 header{
@@ -19,8 +19,8 @@ header{
 
 :root {
     --primary-color: rgba(0, 0, 0, 0.75);
-    /* --overlay-color: rgba(24, 39, 51 , 0.85);
-    --menu-speed: 0.75s; */
+    --overlay-color: rgba(16, 17, 17, 0.85);
+    --menu-speed: 0.75s;
 }
 
 .header1 {
@@ -42,20 +42,160 @@ header{
     z-index: -1;
 }
 
-/* .header1{
-    margin: 0px;
-    padding: 0px;
-    height: 100vh;
-    font-size: 20px;
-    background-image: url(beyphotos/beyonce-background.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    color: black;
-    text-align: center;	
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* .wrapper{
+	margin: 0 auto;
+	padding: 15px 0px 10px 0px;		
+	display: flex;
+   	flex-direction: row;
+  	justify-content: space-between;
+  	font-size: 12px;
+  	height: 60px;
+  	color: white;
+  	width: 85%;
 } */
+
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.wrapper .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+  
+.wrapper .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  /* Hamburger Line */
+.wrapper .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+  
+  /* Hamburger Lines - Top & Bottom */
+.wrapper .hamburger > div::before,
+.wrapper .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+  
+  /* Moves Line Down */
+.wrapper .hamburger > div::after {
+    top: 10px;
+}
+  
+  /* Toggler Animation */
+.wrapper .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+  
+  /* Turns Lines Into X */
+.wrapper .toggler:checked + .hamburger > div:before,
+.wrapper .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+  
+  /* Rotate On Hover When Checked */
+.wrapper .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+}
+  
+  /* Show Menu */
+.wrapper .toggler:checked ~ .fixednavbar {
+    visibility: visible;
+}
+  
+.wrapper .toggler:checked ~ .fixednavbar > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+  
+.wrapper .toggler:checked ~ .fixednavbar > div > div {
+    opacity: 1;
+    transition:  opacity 0.4s ease 0.4s;
+}
+  
+.wrapper .fixednavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.wrapper .fixednavbar > div {
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+  
+.wrapper .fixednavbar > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+  
+.wrapper .fixednavbar > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+  
+.wrapper .fixednavbar > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+  
+
 
 li{
     list-style-type: none;
@@ -70,7 +210,7 @@ nav{
 	top:0;
 	z-index: 1;
 }
-.wrapper{
+/* .wrapper{
 	margin: 0 auto;
 	padding: 15px 0px 10px 0px;		
 	display: flex;
@@ -80,16 +220,16 @@ nav{
   	height: 60px;
   	color: white;
   	width: 85%;
-}
-.navbar{
+} */
+/* .navbar{
 	display: flex;
 	flex-direction: row;
     justify-content: space-between;
-}
-.navbutton{
+} */
+/* .navbutton{
     padding: 0px 30px 0px 30px;
     margin: 0 auto;
-}
+} */
 
 body{
     margin: 0 auto;
@@ -104,16 +244,21 @@ body{
 }
 
 button{
-	background-color: rgba(0,0,0,0.9);
+	background-color: rgb(27, 26, 26);
 	color: white;
 	height: 35px;
     width: 150px;
     padding: 0 15px 0 15px;
     margin: 15px;
+    transition: opacity 1s ease-in-out;
+}
+button:hover {
+    opacity: 0.6;
 }
 
 .input{
     height: 35px;
     width: 150px;
     font-size: 15px;
+    background-color: rgba(51, 49, 49, 0.9);
 }
