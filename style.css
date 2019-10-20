@@ -1,16 +1,21 @@
 *{
-    text-align: center;
     margin: 0;
     padding: 0;
-    list-style: none;
-    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body{
+    text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
 }
+
 header{
     margin: 0px;
     padding: 0px;
 }
+
 .header1{
     margin: 0px;
     padding: 0px;
@@ -64,13 +69,12 @@ body{
     margin: 0 auto;
 }
 
-h3{
-    padding: 40px 0 20px 0;
-	font-weight: 200;
-	font-size: 100px;
-	font-family: 'Playfair Display', serif;
-    letter-spacing: 0;	
-    color: rgba(0,0,0,0.9);
+.homecoming{
+    margin: 0%;
+	
+}
+.randomBeyonce{
+    margin: -40px 0 0 0;
 }
 
 button{
@@ -85,4 +89,5 @@ button{
 .input{
     height: 35px;
     width: 150px;
+    font-size: 15px;
 }
