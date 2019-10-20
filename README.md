@@ -1,6 +1,6 @@
 # whatIsYourBeyonce
 
-This project challenged me to combine my programming skills in JavaScript with my skills in building out user interfaces with HTML and CSS.
+This project challenged me to combine my programming skills in JavaScript with my skills in HTML and CSS, to build out a beychella themed user interface.
 
 ## Tools Used:
 
