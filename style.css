@@ -262,3 +262,37 @@ button:hover {
     font-size: 15px;
     background-color: rgba(51, 49, 49, 0.9);
 }
+
+.footer-link{
+	text-decoration: none;
+    color: white;
+}
+
+.buttom{
+	color: white;	
+	background-color: black;
+	height: 100px;
+    margin: 0;
+}
+
+h2{
+    /* margin: 10px 0 0 0; */
+    padding: 5px 0 5px 0;
+    font-weight: 100;
+    font-family: 'Playfair Display', serif;
+}
+.submit{
+    background-color: rgb(27, 26, 26);
+	color: white;
+	height: 35px;
+    width: 150px;
+    padding: 0 15px 0 15px;
+    /* margin: 15px; */
+    transition: opacity 1s ease-in-out;
+}
+.submit:hover {
+    opacity: 0.6;
+}
+#lower-input{
+    width: 769px;
+}
