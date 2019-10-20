@@ -19,9 +19,20 @@ const url3 = "https://api.lyrics.ovh/v1/beyonce/1+1/"
     .then (res => console.log(res))
     .catch (err => console.log (err))
 
-// const url4 = "https://api.gettyimages.com/v3/images/83454800"
-//     fetch(url4)
-//     .then (res => res.json())
-//     .then (res => console.log(res))
-//     .catch (err => console.log (err))
+const url4 = "https://api.giphy.com/v1/gifs/random?api_key=5VHD8krqyXl6NCnL26GYoLw8yxwc9NH8&tag=beyonce&rating=G"
+const randomButton = document.querySelector(".randomButton")
+randomButton.addEventListener("click", function(evt){
+    evt.preventDefault()
+    fetch(url4)
+        .then (res => res.json())
+        .then (res => {
+            //console.log(res.data)
+            //console.log(res.data.image_url)
+            let randomBeyonce = res.data.image_url
+            console.log(randomBeyonce)
+            document.querySelector(".randomBeyonceImage").src = randomBeyonce;
+        })
+        .catch (err => console.log (err))
+})
 
+// document.querySelector(".randomCatImage").src = catPic;
